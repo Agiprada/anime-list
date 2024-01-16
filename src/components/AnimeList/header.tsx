@@ -1,8 +1,15 @@
-//@ts-nocheck
 import React from "react";
 import Link from "next/link";
 
-export default function Header({ title, linkHref, linkTitle }) {
+export default function Header({
+  title,
+  linkHref,
+  linkTitle,
+}: {
+  title: string;
+  linkHref?: string;
+  linkTitle?: string;
+}) {
   return (
     <div className="flex justify-between items-center p-4 text-color-primary">
       <h1 className=" text-2xl font-bold">{title}</h1>

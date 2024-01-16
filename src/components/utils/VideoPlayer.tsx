@@ -33,10 +33,7 @@ export default function VideoPlayer({ youtubeId }) {
 
   const ButtonOpenVideo = () => {
     return (
-      <button
-        onClick={handleVideoPlayer}
-        className="fixed bottom-5 right-5 bg-color-primary text-color-dark text-xl hover:bg-color-accent transition-all shadow-xl"
-      >
+      <button onClick={handleVideoPlayer} className="fixed bottom-5 right-5 bg-color-primary text-color-dark text-xl hover:bg-color-accent transition-all shadow-xl">
         Trailer
       </button>
     );
