@@ -8,7 +8,7 @@ export const authOption = {
   providers: [
     githubAuth({
       clientId: clientId,
-      clientSecret: process.env.GITHUB_CLIENT!,
+      clientSecret: process.env.GITHUB_SECRET!,
     }),
   ],
   secret: process.env.NEXTAUTH_SECRET!,
