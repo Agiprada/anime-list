@@ -31,7 +31,7 @@ export default async function page() {
                 My Collection
               </Link>
               <Link
-                href={""}
+                href="/users/dashboard/review"
                 className="bg-gray-500 text-center p-3 rounded-lg font-bold text-white"
               >
                 My Review

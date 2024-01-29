@@ -2,7 +2,7 @@
 import React from "react";
 import { FileSearch } from "@phosphor-icons/react";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 export default function NotFound() {
   const router = useRouter();

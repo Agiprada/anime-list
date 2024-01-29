@@ -3,9 +3,13 @@ import { getAnimeResponse } from "@/libs/api-libs";
 import VideoPlayer from "@/components/utils/VideoPlayer";
 import Image from "next/image";
 import React from "react";
+import CollectionButton from "@/components/AnimeList/CollectionButton";
+import { authUserSession } from "@/libs/auth-libs";
 
 export default async function Detail({ params: { id } }) {
   const anime = await getAnimeResponse(`anime/${id}`);
+  const user = await authUserSession();
+
   return (
     <div className="mt-16">
       <div className="pt-4 px-4">
@@ -29,6 +33,14 @@ export default async function Detail({ params: { id } }) {
         <div className="w-36 flex flex-col justify-center items-center rounded border">
           <h3>Episode</h3>
           <p>{anime.data.episodes}</p>
+        </div>
+        <div className="flex justify-end w-full rounded-lg">
+          <CollectionButton
+            anime_mal_id={id}
+            user_email={user?.email}
+            anime_title={anime.data.title}
+            anime_image={anime.data.images.webp.image_url}
+          />
         </div>
       </div>
 
